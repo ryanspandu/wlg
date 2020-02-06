@@ -1,0 +1,3 @@
+<footer class="w-100 bggray p-4 p-sm-5 mt-5">
+    <p class="tgray f14 max992 mx-auto px-1 px-md-4 text-center">Metrolagu.onl - Gudang lagu mp3 terbaru, download lagu mp3 terbaik gratis, dengarkan lagu mp3 secara online, top download lagu Indonesia. download lagu mp3 gratis, download lagu mp3 terbaru 2020, Stafa Band Tangga Lagu - Download lagu terbaru 2020 Indonesia planetlagu. Gratis Lagu Barat Dangdut Koplo Full Album Terlengkap wapka mobi, download lagu barat hits terbaru 2020.</p>
+</footer>
