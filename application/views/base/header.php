@@ -1,6 +1,6 @@
 <div class="w-100 bg-white fixed-top" style="">
     <nav class="max992 mx-auto px-3 px-lg-0 d-flex align-items-center d-flex justify-content-between justify-content-md-start position-relative" style="height: 60px;">
-        <a href="index.php" class="text-decoration-none mr-0 mr-md-5">
+        <a href="<?php echo base_url(); ?>" class="text-decoration-none mr-0 mr-md-5">
             <img src="<?php echo base_url('assets/img/logo.jpg'); ?>" class=""/>
         </a>
         <form action="search.php" method="POST" class="d-md-flex d-none flex-row ml-5 w-100 bggray rounded-pill p-1" style="max-width: 470px; height: 50px;">

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Lagu - Search</title>
 
-    <?php include 'base/head.php'; ?>
+    <?php $this->view('base/head'); ?>
 
 </head>
 <body id="mantul">
     <!-- NAVBAR -->
-    <?php include 'base/header.php'; ?>
+    <?php $this->view('base/header'); ?>
     <!-- NAVBAR END -->
 
 
@@ -21,58 +21,33 @@
         <div class="col-12 col-md-7 px-0 mt-4 mt-md-5 overflow-hidden" style="">
             <div class="m-auto mx-md-0 overflow-hidden" style="max-width: 544px;">
                 <div class="">
+                <?php 
+                if($url == base_url('search/').$q) { ?>
                     <p class="fontsub tgray">Hasil Pencarian Lagu</p>
                     <p class="f28 bold">Hasil Pencarian</p>
-                </div>
-
-                <div class="borderblue rounded-lg px-5 py-4 mt-4">
-                <?php 
-                $now = "http://localhost/lagu/category/";
-                if($url == $now.$q) { ?>
-                    <p class="bold f28 tblack"><?php echo $url; ?></p>
-
+                <?php }elseif($url == base_url('category/').$q) { ?>
+                    <p class="fontsub tgray">Genre Lagu</p>
+                    <p class="f28 bold"><?php echo $q; ?></p>
                 <?php } ?>
+                </div>
+                <?php 
+                if($url !== base_url('category/').$q) { ?>
+                <div class="borderblue rounded-lg px-5 py-4 mt-4">
                     <p class="tblue">
                         Download lagu Tones And I Dance Monkey MP3 dapat kamu download secara gratis di MetroLagu. Untuk melihat detail lagu Tones And I Dance Monkey klik salah satu judul yang cocok, kemudian untuk link download Tones And I Dance Monkey ada di halaman berikutnya.
                     </p>
                 </div>
+                <?php } ?>
 
                 <!-- MAIN CONTENT -->
                 <div class="w-100 mt-4">
                     <!-- Content Fill -->
                     <?php 
-                        $lagumain = array("Justin Biebir - O Aja Ya Kan", "Charlie Puth - Cinta Satu Malam", "Dua Lipa - Dua Tiga Empat Lipa", "Michael Michael - Sometimes it's Hurts but it's OK");
-                        $nomain = 0;
-                    ?>
-                    <?php
-                        foreach($lagumain as $lm) {
-                            ?>
-                            <div class="d-flex flex-column mb-4 lagumaincontainer pb-3 px-2">
-                                <div class="d-flex flex-row" style="">
-                                    <a href="download.php?id=IDNYE" class="gambarmain bgsoftgreen rounded-lg overflow-hidden position-relative d-flex justify-content-center" style="">
-                                        <img src="<?php echo base_url('assets/img/banner.jpg'); ?>" class="mx-auto position-absolute h-100 mx-auto" style="top: 0;"/>
-                                    </a>
-                                    <a href="download.php?id=IDNYE" class="ml-3 text-decoration-none tgrayblack">
-                                        <p class="f16"><?php echo $lm ?></p>
-                                    </a>
-                                </div>
-                                <div class="maindetails mt-3 d-flex flex-row justify-content-between pt-2 " style="border-top: 1px solid rgba(184, 184, 184, 0.315);">
-                                    <div class="text-decoration-none d-flex flex-row">
-                                        <img src="<?php echo base_url('assets/icon/icon_main_play.svg'); ?>" class="" width="15px"/>
-                                        <p class="f14 ml-2 tgray medium">24 K</p>
-                                    </div>
-                                    <div class="text-decoration-none d-flex flex-row">
-                                        <img src="<?php echo base_url('assets/icon/icon_main_time.svg'); ?>" class="" width="15px"/>
-                                        <p class="f14 ml-2 tgray medium">07 Jan 2019</p>
-                                    </div>
-                                    <a href="download.php?id=IDNYE" class="text-decoration-none d-flex flex-row">
-                                        <img src="<?php echo base_url('assets/icon/icon_main_download.svg'); ?>" class="" width="13px"/>
-                                        <p class="f14 ml-2 tgray medium">Download</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <?php
-                        }
+                    if($url == base_url('search/').$q) {
+                        $this->view('content/search');
+                    }elseif($url == base_url('category/').$q) { 
+                        $this->view('content/category');
+                    } 
                     ?>
                     <!-- Content Fill End -->
                 </div>
@@ -90,7 +65,7 @@
         </div>
 
         <div class="col-12 col-md-5 p-0 pl-md-3 pl-lg-0 mt-4 mt-md-5" style="">
-            <?php include 'base/sidebar.php'; ?>
+            <?php $this->view('base/sidebar'); ?>
         </div>
         <!-- SECTION 1 END -->
     </div>
@@ -99,7 +74,7 @@
     
 
     <!-- FOOTER  -->
-    <?php include 'base/footer.php'; ?>
+    <?php $this->view('base/footer'); ?>
     <!-- FOOTER END -->
 </body>
 </html>

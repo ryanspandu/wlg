@@ -10,32 +10,32 @@
                 array(
                     "img" => base_url('assets/img/edm.jpg'),
                     "title" => "EDM",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/EDM')
                 ),
                 array(
                     "img" => base_url('assets/img/kpop.jpg'),
                     "title" => "K-POP",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/K-POP')
                 ),
                 array(
                     "img" => base_url('assets/img/dangdut.jpg'),
                     "title" => "DANGDUT",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/DANGDUT')
                 ),
                 array(
                     "img" => base_url('assets/img/pop.jpg'),
                     "title" => "POP",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/POP')
                 ),
                 array(
                     "img" => base_url('assets/img/acoustic.jpg'),
                     "title" => "ACOUSTIC",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/ACOUSTIC')
                 ),
                 array(
                     "img" => base_url('assets/img/indie.jpg'),
                     "title" => "INDIE",
-                    "link" => "search.php?id=IDCATEGORY"
+                    "link" => base_url('category/INDIE')
                 )
             );                        
         ?>
@@ -67,7 +67,7 @@
         ?>
         <?php foreach($lagubaru as $lb) { ?>
             <div class="border-bottom p-3">
-                <a href="search.php?id=<?php echo $lb; ?>" class="tblue text-decoration-none f16"><?php echo $lb; ?></a>
+                <a href="<?php echo base_url('search/').$lb; ?>" class="tblue text-decoration-none f16"><?php echo $lb; ?></a>
             </div>
         <?php }
         ?>
