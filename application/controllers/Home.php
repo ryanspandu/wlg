@@ -8,9 +8,19 @@ class Home extends CI_Controller {
 		$this->load->view('index');
 	}
 
-	public function search()
+	public function search($search=NULL)
 	{
-		$this->load->view('search');
+		$data["q"] = $search;
+		$data["url"] = current_url();
+		$makan['enak'] = "kerja dulu gblk";
+		$this->load->view('search', $data);
+	}
+
+	public function category($category=NULL)
+	{
+		$data["q"] = $category;
+		$data["url"] = current_url();
+		$this->load->view('search', $data);
 	}
 
 	public function download()

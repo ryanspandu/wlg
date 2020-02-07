@@ -26,6 +26,12 @@
                 </div>
 
                 <div class="borderblue rounded-lg px-5 py-4 mt-4">
+                <?php 
+                $now = "http://localhost/lagu/category/";
+                if($url == $now.$q) { ?>
+                    <p class="bold f28 tblack"><?php echo $url; ?></p>
+
+                <?php } ?>
                     <p class="tblue">
                         Download lagu Tones And I Dance Monkey MP3 dapat kamu download secara gratis di MetroLagu. Untuk melihat detail lagu Tones And I Dance Monkey klik salah satu judul yang cocok, kemudian untuk link download Tones And I Dance Monkey ada di halaman berikutnya.
                     </p>
@@ -44,7 +50,7 @@
                             <div class="d-flex flex-column mb-4 lagumaincontainer pb-3 px-2">
                                 <div class="d-flex flex-row" style="">
                                     <a href="download.php?id=IDNYE" class="gambarmain bgsoftgreen rounded-lg overflow-hidden position-relative d-flex justify-content-center" style="">
-                                        <img src="assets/img/banner.jpg" class="mx-auto position-absolute h-100 mx-auto" style="top: 0;"/>
+                                        <img src="<?php echo base_url('assets/img/banner.jpg'); ?>" class="mx-auto position-absolute h-100 mx-auto" style="top: 0;"/>
                                     </a>
                                     <a href="download.php?id=IDNYE" class="ml-3 text-decoration-none tgrayblack">
                                         <p class="f16"><?php echo $lm ?></p>
@@ -52,15 +58,15 @@
                                 </div>
                                 <div class="maindetails mt-3 d-flex flex-row justify-content-between pt-2 " style="border-top: 1px solid rgba(184, 184, 184, 0.315);">
                                     <div class="text-decoration-none d-flex flex-row">
-                                        <img src="assets/icon/icon_main_play.svg" class="" width="15px"/>
+                                        <img src="<?php echo base_url('assets/icon/icon_main_play.svg'); ?>" class="" width="15px"/>
                                         <p class="f14 ml-2 tgray medium">24 K</p>
                                     </div>
                                     <div class="text-decoration-none d-flex flex-row">
-                                        <img src="assets/icon/icon_main_time.svg" class="" width="15px"/>
+                                        <img src="<?php echo base_url('assets/icon/icon_main_time.svg'); ?>" class="" width="15px"/>
                                         <p class="f14 ml-2 tgray medium">07 Jan 2019</p>
                                     </div>
                                     <a href="download.php?id=IDNYE" class="text-decoration-none d-flex flex-row">
-                                        <img src="assets/icon/icon_main_download.svg" class="" width="13px"/>
+                                        <img src="<?php echo base_url('assets/icon/icon_main_download.svg'); ?>" class="" width="13px"/>
                                         <p class="f14 ml-2 tgray medium">Download</p>
                                     </a>
                                 </div>

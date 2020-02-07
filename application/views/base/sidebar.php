@@ -8,32 +8,32 @@
         <?php 
             $categories = array(
                 array(
-                    "img" => "assets/img/edm.jpg",
+                    "img" => base_url('assets/img/edm.jpg'),
                     "title" => "EDM",
                     "link" => "search.php?id=IDCATEGORY"
                 ),
                 array(
-                    "img" => "assets/img/kpop.jpg",
+                    "img" => base_url('assets/img/kpop.jpg'),
                     "title" => "K-POP",
                     "link" => "search.php?id=IDCATEGORY"
                 ),
                 array(
-                    "img" => "assets/img/dangdut.jpg",
+                    "img" => base_url('assets/img/dangdut.jpg'),
                     "title" => "DANGDUT",
                     "link" => "search.php?id=IDCATEGORY"
                 ),
                 array(
-                    "img" => "assets/img/pop.jpg",
+                    "img" => base_url('assets/img/pop.jpg'),
                     "title" => "POP",
                     "link" => "search.php?id=IDCATEGORY"
                 ),
                 array(
-                    "img" => "assets/img/acoustic.jpg",
+                    "img" => base_url('assets/img/acoustic.jpg'),
                     "title" => "ACOUSTIC",
                     "link" => "search.php?id=IDCATEGORY"
                 ),
                 array(
-                    "img" => "assets/img/indie.jpg",
+                    "img" => base_url('assets/img/indie.jpg'),
                     "title" => "INDIE",
                     "link" => "search.php?id=IDCATEGORY"
                 )
